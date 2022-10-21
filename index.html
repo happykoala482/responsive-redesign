@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<link href='https://rsms.me/inter/inter.css' rel='stylesheet'>
+<html lang="en">
+  <head>
+    <title>Responsive Redesign</title>
+    <!-- import javascript variables and functions -->
+    <script src="app.js" defer></script>
+    <!-- import CSS styles -->
+    <link rel="stylesheet" href="styles.css" /> 
+  </head>
+
+  <!-- page content goes into <body> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <body onload="loadDesktopListingValues()">
+    <div class="top-bar-large">
+        <div class="top-bar-upper">
+            <div>
+                <img class="logo" src="./assets/logo.png">
+                <input class="large" type="text" placeholder="What can we help you find?">
+                <button class="top-bar-button"><img src="./assets/store-icon.png"><span>Cambridge</span></button>
+            </div>
+            <button class="top-bar-button small"><img src="./assets/search-icon.png"></button>
+            <button class="top-bar-button"><img src="./assets/account-icon.png"><span class="large">Sign In</span></button>
+            <button class="top-bar-button last"><img src="./assets/cart-icon.png"><span class="large">Cart</span></button>
+        </div>
+         <div class="top-bar-lower">
+            <div class="top-bar-lower-large">
+                <button>Products <span class="cpu">></span></button>
+                <button>Top Deals <span class="cpu">></span></button>
+                <button>PC Parts <span class="cpu">></span></button>
+                <button>Computers <span class="cpu">></span></button>
+                <button>Apple <span class="cpu">></span></button>
+                <button>Service & Repair <span class="cpu">></span></button>
+                <button>Help</button>
+                <button>Community</button>
+                <button><span class="cpu bold">18 MINUTE IN STORE PICKUP</span></button>
+            </div>   
+            <div class="top-bar-lower-medium">
+                <button><img src="./assets/menu-icon.png"></button>
+                <button><span class="cpu bold">18 MINUTE IN STORE PICKUP</span></button>
+            </div>
+         </div>
+    </div>
+
+    <div class="top-bar-small">
+        <div class="top-bar-upper">
+            <button class="top-bar-button first"><img src="./assets/menu-icon-white.png"></button>
+            <img class="logo" src="./assets/logo.png">
+            <button class="top-bar-button last"><img src="./assets/cart-icon.png"></button>
+        </div>
+        <div class="top-bar-lower">
+            <button><span class="cpu bold">18 MINUTE IN STORE PICKUP</span></button>
+        </div>
+    </div>
+    
+
+    </div>
+
+    <div class="desktop-heading">
+        <h1 class="small">Find your <span class="bold">Desktop</span>.</h1>
+        <h1 class="large">Find the <span class="bold">Desktop</span> that's right for <span class="bold">you</span>.</h1>
+        <h2 class="secondary-color medium large">Gaming. Professional. Casual. All within your budget.</h2>
+    </div>
+
+    <div class="category-bar gaming" id="category-bar">
+        <div>
+            <button class="left-arrow" onclick="leftClick()"></button>
+            <div>
+                <img class="category-bar-img1" src="./assets/gaming-1.png" id="category-bar-image1">
+                <h1 class="bold white" id="category-bar-h1">Gaming</h1>
+                <img class="category-bar-img2" src="./assets/gaming-2.png" id="category-bar-image2">
+            </div>
+            <button class="right-arrow" onclick="rightClick()"></button>
+        </div>
+    </div>
+
+    <div class="centered-column">
+        <div class="category-specs">
+            <h1 id="spec-h1">Play the latest games. <span class="secondary-color large">Maximize your potential.</span></h1>
+            <div class="gallery-container">
+                <div class="spec-info">
+                    <img src="./assets/gpu-icon.png">
+                    <p id="gpu-spec">Graphics performance is most important to you so we'll allocate the largest chunk of your budget to a <span class="gpu">powerful graphics card.</span></p>
+                </div>
+                <div class="spec-info">
+                    <img src="./assets/cpu-icon.png">
+                    <p id="cpu-spec">Our higher-end systems will also have plenty of <span class="cpu">CPU performance</span> so you can stream your gameplay for your friends and audience.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="centered-column">
+        <div class="desktop-listings">
+            <h1 class="medium">Entry-Level.</h1>
+            <h2 class="secondary-color medium" id="entry-level-h2">You've got a budget between $650 and $1,000. These systems will be perfect for Esports titles and 1080p gaming!</h2>
+        </div>
+    </div>
+
+    <div class="centered-column">
+        <div class="carousel-container">
+            <div class="carousel" id="entry-level-carousel">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="centered-column">
+        <div class="desktop-listings">
+            <h1 class="medium">Mid-Range.</h1>
+            <h2 class="secondary-color medium" id="mid-range-h2">You've got a budget between $1,000 and $1,750. These systems will handle every game and be perfect for 1440p gaming.</h2>
+        </div>
+    </div>
+
+    <div class="centered-column">
+        <div class="carousel-container">
+            <div class="carousel" id="mid-range-carousel">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="centered-column">
+        <div class="desktop-listings">
+            <h1 class="medium">High-End.</h1>
+            <h2 class="secondary-color medium" id="high-end-h2">You've got a budget over $1,750. These systems will handle any game you throw at them with the highest settings and the resolution all the way to 4k.</h2>
+        </div>
+    </div>
+
+    <div class="centered-column">
+        <div class="carousel-container">
+            <div class="carousel" id="high-end-carousel">
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="carousel-item">
+        <div class="desktop-listing">
+            <img src="./assets/computer_1.png">
+            <p>Lenovo Legion T5i 26IOB6 Gaming PC </p>
+            <div class="star-ratings">
+                <img src="./assets/empty-star.png">
+                <img src="./assets/empty-star.png">
+                <img src="./assets/empty-star.png">
+                <img src="./assets/empty-star.png">
+                <img src="./assets/empty-star.png">
+            </div>
+            <p>$849.99</p>
+            <div class="desktop-spec">
+                <img src="./assets/gpu-icon.png">
+                <p class="gpu">NVIDIA GeForce RTX 3060</p>
+            </div>
+            <div class="desktop-spec">
+                <img src="./assets/cpu-icon.png">
+                <p class="cpu">Intel Core i5 11th Gen 11500</p>
+            </div>
+        </div>
+    </div> -->
+
+  </body>
+
+</html>
